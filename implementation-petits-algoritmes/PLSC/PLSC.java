@@ -6,6 +6,7 @@
  * @author M'hamed Battioui
  */
 
+import java.io.*;
 
 public class PLSC {
     public static void main(String[] args) {
@@ -63,8 +64,12 @@ public class PLSC {
 			j--;
 	}
 
+	StringBuilder reverseSSC = new StringBuilder();
+	reverseSSC.append(sousSequenceCommune);
+	reverseSSC.reverse();
+
         return String.valueOf(tab[tab.length - 1][tab[0].length - 1]) + 
-                "\n" + sousSequenceCommune; // la sous sequence commune n'est pas bien en terme de logique
+                "\n" + reverseSSC;
     }
 
     public static void initialiserTab(int tab[][]) {
